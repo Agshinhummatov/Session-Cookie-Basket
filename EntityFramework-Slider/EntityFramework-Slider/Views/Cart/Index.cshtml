@@ -1,0 +1,42 @@
+﻿@model List<BasketVM>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Count</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td> <img style="width:80px; height:80px" src="~/img/@item.Image" /> </td>
+                <td>$@item.Price</td>
+                <td>@item.Count</td>
+                <td>$@item.Total</td>
+            </tr>
+            
+        }
+        
+    </tbody>
+
+    
+</table>
+
+
+
+
